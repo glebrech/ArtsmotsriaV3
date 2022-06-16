@@ -16,7 +16,7 @@
 
             foreach ($results['programmes'] as $programme) {
             ?>
-            <?php if ($programme->dayofweek == "Vendredi") { ?>
+            <?php if ($programme->dayofweek == "Vendredi") { //Verify if dayofweek is equal at "Vendredi" ?> 
             <div class="blockProgramme">
                 <img class="imageProgramme" src="<?php echo $programme->url_image; ?>" alt="Illustration du programme">
                 <h2 class="titleProgramme">
