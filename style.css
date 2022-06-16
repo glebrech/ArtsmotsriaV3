@@ -1,144 +1,151 @@
 #logo {
   width: 172px;
-    height: 173px;
-  margin-left: 43px;
-  margin-top: 10px;
-  }
-
-.header {
-  display: flex ;
-  align-items: center;
-  justify-content: space-between;
-   
+  height: auto;
+  max-width: 30%;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: absolute;
+  width: 100%;
+}
+
+.header a {
+  color: #582900;
+}
 .headerBouton {
   background-color: #582900;
   color: #e6dac8;
-  margin-right: 20px;
   font-size: 18px;
   width: 222px;
   height: 74px;
+  margin-right: 20px;
+  
+}
+body .header a.headerBouton:hover,
+body .header a.headerBouton {
+  line-height: 54px;
+  color: #e6dac8;
+
+}
+.brown {
+  color: #582900;
 }
 
-.brown{
-  color:#582900
+.backgroundAccueil {
+  background-image: url("./images/tables_de_jeux_2.png");
 }
 
-.backgroundAccueil{
-  background-image: url('./images/tables_de_jeux_2.png')  ;
+.nav {
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 30px;
 }
 
-.nav{
-  text-align: center;
-    font-family: Louis George Cafe;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 30px;
-    margin-top: 20.5px ;
-    
+.margenav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 70%;
 }
 
-.logoHome{
+.logoHome {
   width: 658px;
-    height: 659px;
-
+  height: 659px;
+  margin: auto;
 }
 
-.home{
- 
+.home {
   text-align: center;
-
-
+  background-image: url("images/tables_de_jeux_2.png");
 }
 
-.textHome{
+.textHome p {
+  margin: 0 !important;
+}
+
+.main {
+  padding-top: 200px;
+}
+
+.textHome {
   text-align: center;
-    font-family: Apple Chancery;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 45px;
-  color:#582900;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+  color: #582900;
 }
 
-.buttonHome{
+.buttonHome {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.margenav{
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-.presentation{
+.presentation {
   background-color: #e6dac8;
   padding: 20px;
   height: 611px;
 }
 
-.h2presentation{
+.h2presentation {
   text-align: center;
   font-family: Apple Chancery;
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
-  color:#582900;
-
+  color: #582900;
 }
 
-.textpresentation{
+.textpresentation {
   text-align: left;
   font-family: Louis George Cafe;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
   width: 598px;
-  color: rgba(3,34,76,1);
+  color: rgba(3, 34, 76, 1);
 }
 
-
-.blockpresentation{
-   width: 500px;
- 
+.blockpresentation {
+  width: 500px;
 }
 
-.imagepresentation{
- display: flex;
- align-items: center;
- justify-content: space-evenly;
+.imagepresentation {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
-.voirplus{
+.voirplus {
   text-align: center;
-    font-family: Louis George Cafe;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    background-color: #582900;
-    color: #e6dac8;
-    width: 175px;
-    height: 64px;
-    margin-left: 300px;
-  }
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  background-color: #582900;
+  color: #e6dac8;
+  width: 175px;
+  height: 64px;
+  margin-left: 300px;
+}
 
-  .flag{
-    text-align: center;
-    font-family: Apple Chancery;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: #e6dac8;
-    display: flex;
-    align-items: center;
-    
-    
-   
-  }
+.flag {
+  text-align: center;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: #e6dac8;
+  display: flex;
+  align-items: center;
+}
 
-.backblue{
+.backblue {
   background-color: #03224c;
   width: 25%;
   height: 323px;
@@ -146,73 +153,279 @@
   padding-top: 3%;
 }
 
-.backbrown{
+.backbrown {
   background-color: #582900;
-  flex: auto;
+  width: 25%;
   height: 323px;
   padding-top: 3%;
-
 }
 
-.h2partenaire{
+.h2partenaire {
   text-align: center;
-    font-family: Apple Chancery;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 40px;
-    color: rgba(88,41,0,1);
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: rgba(88, 41, 0, 1);
 }
 
-.partner{
+.partner {
   background-color: #e6dac8;
 }
 
-.textpartner{
+.textpartner {
   text-align: center;
-    font-family: Louis George Cafe;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 15px;
-    color: rgba(3,34,76,1);
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  color: rgba(3, 34, 76, 1);
 }
 
-.imgpartner{
+.imgpartner {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   padding: 3%;
 }
 
-#footer{
+#footer {
   background-color: #03224c;
   display: flex;
   padding: 3%;
-  
 }
 
-.buttonFooter{
+.buttonFooter {
   text-align: center;
-    font-family: Louis George Cafe;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    color: rgba(230,218,200,1);
-    background-color: #03224c;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: rgba(230, 218, 200, 1);
+  background-color: #03224c;
 }
 
-.logosocialmedia{
+.logosocialmedia {
   margin-left: auto;
   margin-right: 3%;
-  
-  
 }
 
-.insta{
+.insta {
   width: 53px;
-    height: 53px;
-    margin-left: 10px;
+  height: 53px;
+  margin-left: 10px;
 }
-.fb{
+.fb {
   width: 29px;
   height: 55px;
 }
+
+.info {
+  color: #03224c;
+  justify-content: center;
+  align-items: center;
+  background-color: #e6dac8;
+}
+
+.titreInfo {
+  color: #582900;
+  text-align: center;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  margin: 5%;
+}
+
+.imageHoraire {
+  width: 594px;
+  height: 412px;
+}
+
+.imageLieu {
+  width: 608px;
+  height: 409px;
+}
+
+.subtitleInfo {
+  text-align: center;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+}
+
+.textRest {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 45px;
+}
+
+.imageRest {
+  width: 1453px;
+  height: 257px;
+}
+
+.blockInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.centerImgRest {
+  display: flex;
+  justify-content: center;
+}
+
+.select {
+  text-decoration: underline;
+}
+
+.backIconInfo {
+  background-color: #582900;
+}
+
+.blockContact {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.titreContact {
+  text-align: center;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: rgba(88, 41, 0, 1);
+  margin: 2%;
+}
+
+.blockContact p {
+  white-space: nowrap;
+  text-align: center;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  color: rgba(3, 34, 76, 1);
+}
+
+.questionp p {
+  white-space: nowrap;
+  text-align: left;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgba(3, 34, 76, 1);
+}
+
+.contact {
+  background-color: #e6dac8;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input {
+  border-color: #e6dac8;
+  width: 987px;
+  height: 57px;
+}
+
+.message {
+  width: 987px;
+  height: 212px;
+}
+
+.btnEnvoyer {
+  text-align: center;
+  margin: 2%;
+}
+
+.blockProgramme {
+  width: 398px;
+  height: 531px;
+  background-color: #582900;
+  border-radius: 3%;
+  margin-bottom: 50px;
+}
+
+.blockProgramme:nth-child(2n) {
+  background-color: #03224c;
+}
+
+.pageProgrammation {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 140px;
+  margin-bottom: 0;
+}
+
+.imageProgramme {
+  width: 398px;
+  height: 278px;
+}
+
+.titleProgramme {
+  text-align: center;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgba(237, 229, 217, 1);
+}
+
+.content {
+  text-align: center;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  color: rgba(237, 229, 217, 1);
+  padding: 20px;
+}
+
+.backProgrammation {
+  background-color: #e6dac8;
+}
+
+.backProgrammation h1 {
+  text-align: center;
+  font-family: Apple Chancery;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  color: rgba(88, 41, 0, 1);
+}
+.pdf {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  color: rgba(3, 34, 76, 1);
+}
+.day {
+  text-align: center;
+  font-family: Louis George Cafe;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: rgba(3, 34, 76, 1);
+}
+
+.pdf_Programme {
+  position: relative;
+}
+

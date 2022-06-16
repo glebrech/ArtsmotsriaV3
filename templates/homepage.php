@@ -1,10 +1,10 @@
 <?php include "templates/include/header.php" ?>
 
-<div class="home">
-    <h1 class="textHome">Festival Artsmotsria<h1>
-            <div class="home">
+<div class="home main">
+    <h1 class="textHome">Festival Artsmotsria</h1>
+            
                 <img class="logoHome" src="images/logo_Bleu.png" alt="Logo du festival">
-            </div>
+            
             <div class="buttonHome">
                 <div>
                     <button type="button" class="btn headerBouton"><img src="images/billet.png" />Billeterie</button>

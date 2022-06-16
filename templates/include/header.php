@@ -2,29 +2,31 @@
 <html lang="en">
 
 <head>
-    <title><?php echo htmlspecialchars( $results['pageTitle'] )?></title>
+    <title><?php echo ( $results['pageTitle'] )?></title>
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 </head>
 
 <body>
     <div class="header brown">
-        <div>
+        
             <img id="logo" src="images/Logo_bleu.png" alt="logo" />
-        </div>
+        
 
         <div class=margenav>
             <div class="nav">
-                <p>Accueil</p>
+            <a href="./?action=homepage" <?php if(isset($_GET["action"])) {if($_GET["action"]=="homepage" ){echo "class='select'";}} else {echo"class='select'";} ?> >Accueil</a>
             </div>
             <div class="nav">
-                <p>Programmation</p>
+            <a href="./?action=programmation" <?php if(isset($_GET["action"])) {if($_GET["action"]=="programmation"){echo "class='select'";}} ?>>Programmation</a>
             </div>
             <div class="nav">
-                <p>Infos Pratiques</p>
+            <a href="./?action=infos" <?php if(isset($_GET["action"])) {if($_GET["action"]=="infos"){echo "class='select'";}} ?>>Infos pratiques</a>
             </div>
             <div class="nav">
-                <p>Contact</p>
+            <a href="./?action=contact" <?php if(isset($_GET["action"])) {if($_GET["action"]=="contact"){echo "class='select'";}} ?>>Contact</a>
             </div>
 
             <div>
@@ -32,7 +34,10 @@
                 <button type="button" class="btn headerBouton"><img src="images/billet.png" />Billeterie</button>
             </div>
             <div>
-                <button type="button" class="btn headerBouton"><img src="images/compte.png" />Mon compte</button>
+                
+                <a href="admin.php" type="button" class="btn headerBouton"><img src="images/compte.png" />Mon compte</a>
             </div>
         </div>
     </div>
+
+    <main>

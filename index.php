@@ -7,8 +7,17 @@ switch ( $action ) {
   case 'archive':
     archive();
     break;
-  case 'viewArticle':
-    viewArticle();
+  case 'viewProgramme':
+    viewProgramme();
+    break;
+  case 'infos':
+    infos();
+    break;
+  case 'contact':
+    contact();
+    break;
+  case 'programmation':
+    programmation();
     break;
   default:
     homepage();
@@ -17,32 +26,52 @@ switch ( $action ) {
 
 function archive() {
   $results = array();
-  $data = Article::getList();
-  $results['articles'] = $data['results'];
+  $data = Programme::getList();
+  $results['programmes'] = $data['results'];
   $results['totalRows'] = $data['totalRows'];
-  $results['pageTitle'] = "Article Archive | Widget News";
+  $results['pageTitle'] = "Programme Archive | ArtsMotsRia";
   require( TEMPLATE_PATH . "/archive.php" );
 }
 
-function viewArticle() {
-  if ( !isset($_GET["articleId"]) || !$_GET["articleId"] ) {
+function viewProgramme() {
+  if ( !isset($_GET["programmeId"]) || !$_GET["programmeId"] ) {
     homepage();
     return;
   }
 
   $results = array();
-  $results['article'] = Article::getById( (int)$_GET["articleId"] );
-  $results['pageTitle'] = $results['article']->title . " | Widget News";
-  require( TEMPLATE_PATH . "/viewArticle.php" );
+  $results['programme'] = Programme::getById( (int)$_GET["programmeId"] );
+  $results['pageTitle'] = $results['programme']->title . " | Programme";
+  require( TEMPLATE_PATH . "/viewProgramme.php" );
 }
 
 function homepage() {
-  $results = array();
-  $data = Article::getList( HOMEPAGE_NUM_ARTICLES );
-  $results['articles'] = $data['results'];
-  $results['totalRows'] = $data['totalRows'];
-  $results['pageTitle'] = "Widget News";
+  $results['pageTitle'] = "ArstMotsRia";
   require( TEMPLATE_PATH . "/homepage.php" );
+}
+
+function infos() {
+  $results['pageTitle'] = "Infos pratiques";
+  require( TEMPLATE_PATH . "/infos.php" );
+}
+
+function contact() {
+  $results['pageTitle'] = "Contact";
+  require( TEMPLATE_PATH . "/contact.php" );
+}
+
+function admin() {
+  $results['pageTitle'] = "Mon Compte";
+  require( "/admin.php" );
+}
+
+function programmation() {
+  $results = array();
+  $data = Programme::getList( HOMEPAGE_NUM_ARTICLES );
+  $results['programmes'] = $data['results'];
+  $results['totalRows'] = $data['totalRows'];
+  $results['pageTitle'] = "Programmation";
+  require( TEMPLATE_PATH . "/programmation.php" );
 }
 
 ?>

@@ -1,3 +1,4 @@
+
 <?php
 
 require( "config.php" );
@@ -17,17 +18,17 @@ switch ( $action ) {
   case 'logout':
     logout();
     break;
-  case 'newArticle':
-    newArticle();
+  case 'newProgramme':
+    newProgramme();
     break;
-  case 'editArticle':
-    editArticle();
+  case 'editProgramme':
+    editProgramme();
     break;
-  case 'deleteArticle':
-    deleteArticle();
+  case 'deleteProgramme':
+    deleteProgramme();
     break;
   default:
-    listArticles();
+    listProgrammes();
 }
 
 
@@ -68,96 +69,96 @@ function logout() {
 }
 
 
-function newArticle() {
+function newProgramme() {
 
   $results = array();
-  $results['pageTitle'] = "New Article";
-  $results['formAction'] = "newArticle";
+  $results['pageTitle'] = "New Programme";
+  $results['formAction'] = "newProgramme";
 
   if ( isset( $_POST['saveChanges'] ) ) {
 
-    // User has posted the article edit form: save the new article
-    $article = new Article;
-    $article->storeFormValues( $_POST );
-    $article->insert();
+    // User has posted the programme edit form: save the new programme
+    $programme = new Programme;
+    $programme->storeFormValues( $_POST );
+    $programme->insert();
     header( "Location: admin.php?status=changesSaved" );
 
   } elseif ( isset( $_POST['cancel'] ) ) {
 
-    // User has cancelled their edits: return to the article list
+    // User has cancelled their edits: return to the programme list
     header( "Location: admin.php" );
   } else {
 
-    // User has not posted the article edit form yet: display the form
-    $results['article'] = new Article;
-    require( TEMPLATE_PATH . "/admin/editArticle.php" );
+    // User has not posted the programme edit form yet: display the form
+    $results['programme'] = new Programme;
+    require( TEMPLATE_PATH . "/admin/editProgramme.php" );
   }
 
 }
 
 
-function editArticle() {
+function editProgramme() {
 
   $results = array();
-  $results['pageTitle'] = "Edit Article";
-  $results['formAction'] = "editArticle";
+  $results['pageTitle'] = "Edit Programme";
+  $results['formAction'] = "editProgramme";
 
   if ( isset( $_POST['saveChanges'] ) ) {
 
-    // User has posted the article edit form: save the article changes
+    // User has posted the programme edit form: save the programme changes
 
-    if ( !$article = Article::getById( (int)$_POST['articleId'] ) ) {
-      header( "Location: admin.php?error=articleNotFound" );
+    if ( !$programme = Programme::getById( (int)$_POST['programmeId'] ) ) {
+      header( "Location: admin.php?error=programmeNotFound" );
       return;
     }
 
-    $article->storeFormValues( $_POST );
-    $article->update();
+    $programme->storeFormValues( $_POST );
+    $programme->update();
     header( "Location: admin.php?status=changesSaved" );
 
   } elseif ( isset( $_POST['cancel'] ) ) {
 
-    // User has cancelled their edits: return to the article list
+    // User has cancelled their edits: return to the programme list
     header( "Location: admin.php" );
   } else {
 
-    // User has not posted the article edit form yet: display the form
-    $results['article'] = Article::getById( (int)$_GET['articleId'] );
-    require( TEMPLATE_PATH . "/admin/editArticle.php" );
+    // User has not posted the programme edit form yet: display the form
+    $results['programme'] = Programme::getById( (int)$_GET['programmeId'] );
+    require( TEMPLATE_PATH . "/admin/editProgramme.php" );
   }
 
 }
 
 
-function deleteArticle() {
+function deleteProgramme() {
 
-  if ( !$article = Article::getById( (int)$_GET['articleId'] ) ) {
-    header( "Location: admin.php?error=articleNotFound" );
+  if ( !$programme = Programme::getById( (int)$_GET['programmeId'] ) ) {
+    header( "Location: admin.php?error=programmeNotFound" );
     return;
   }
 
-  $article->delete();
-  header( "Location: admin.php?status=articleDeleted" );
+  $programme->delete();
+  header( "Location: admin.php?status=programmeDeleted" );
 }
 
 
-function listArticles() {
+function listProgrammes() {
   $results = array();
-  $data = Article::getList();
-  $results['articles'] = $data['results'];
+  $data = Programme::getList();
+  $results['programmes'] = $data['results'];
   $results['totalRows'] = $data['totalRows'];
-  $results['pageTitle'] = "All Articles";
+  $results['pageTitle'] = "All Programmes";
 
   if ( isset( $_GET['error'] ) ) {
-    if ( $_GET['error'] == "articleNotFound" ) $results['errorMessage'] = "Error: Article not found.";
+    if ( $_GET['error'] == "programmeNotFound" ) $results['errorMessage'] = "Error: Programme not found.";
   }
 
   if ( isset( $_GET['status'] ) ) {
     if ( $_GET['status'] == "changesSaved" ) $results['statusMessage'] = "Your changes have been saved.";
-    if ( $_GET['status'] == "articleDeleted" ) $results['statusMessage'] = "Article deleted.";
+    if ( $_GET['status'] == "programmeDeleted" ) $results['statusMessage'] = "Programme deleted.";
   }
 
-  require( TEMPLATE_PATH . "/admin/listArticles.php" );
+  require( TEMPLATE_PATH . "/admin/listProgrammes.php" );
 }
 
 ?>

@@ -1,24 +1,24 @@
 <?php include "templates/include/header.php" ?>
-
-      <h1>Article Archive</h1>
+<div class="main">
+      <h1>Programme Archive</h1>
 
       <ul id="headlines" class="archive">
 
-<?php foreach ( $results['articles'] as $article ) { ?>
+<?php foreach ( $results['programmes'] as $programme ) { ?>
 
         <li>
           <h2>
-            <span class="pubDate"><?php echo date('j F Y', $article->publicationDate)?></span><a href=".?action=viewArticle&amp;articleId=<?php echo $article->id?>"><?php echo htmlspecialchars( $article->title )?></a>
+            <span class="pubDate"><?php echo date('j F Y', $programme->publicationDate)?></span><a href=".?action=viewProgramme&amp;programmeId=<?php echo $programme->id?>"><?php echo htmlspecialchars( $programme->title )?></a>
           </h2>
-          <p class="summary"><?php echo htmlspecialchars( $article->summary )?></p>
+          <p class="content"><?php echo htmlspecialchars( $programme->content )?></p>
         </li>
 
 <?php } ?>
 
       </ul>
 
-      <p><?php echo $results['totalRows']?> article<?php echo ( $results['totalRows'] != 1 ) ? 's' : '' ?> in total.</p>
+      <p><?php echo $results['totalRows']?> programme<?php echo ( $results['totalRows'] != 1 ) ? 's' : '' ?> in total.</p>
 
       <p><a href="./">Return to Homepage</a></p>
-
+</div>
 <?php include "templates/include/footer.php" ?>

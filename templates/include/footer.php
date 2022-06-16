@@ -1,3 +1,4 @@
+</main>
 <div id="footer">
     <div>
         <button type="button" class="btn buttonFooter">INFOS</button>
