@@ -19,6 +19,12 @@ switch ( $action ) {
   case 'programmation':
     programmation();
     break;
+  case 'billeterie':
+    billeterie();
+    break;
+  case 'mentionLegales':
+    mentionsLegales();
+    break;
   default:
     homepage();
 }
@@ -74,4 +80,13 @@ function programmation() {
   require( TEMPLATE_PATH . "/programmation.php" );
 }
 
+function billeterie() {
+  $results['pageTitle'] = "Billeterie";
+  require( TEMPLATE_PATH . "/billeterie.php" );
+}
+
+function mentionsLegales() {
+  $results['pageTitle'] = "Mention Légales";
+  require( TEMPLATE_PATH . "/mentionsLegales.php" );
+}
 ?>

@@ -1,10 +1,10 @@
 <?php include "templates/include/header.php" ?>
-<div class="main">
-    <div >
-        <form action="admin.php?action=login" method="post" style="width: 50%;">
+<div class="main blockconnexion">
+    <div class="blockwhite">
+        <form class="" action="admin.php?action=login" method="post">
             <input type="hidden" name="login" value="true" />
 
-            <?php if ( isset( $results['errorMessage'] ) ) { ?>
+            <?php if (isset($results['errorMessage'])) { ?>
             <div class="errorMessage"><?php echo $results['errorMessage'] ?></div>
             <?php } ?>
 
@@ -12,43 +12,54 @@
 
                 <div>
                     <label for="username">E-mail</label>
-                    <input type="text" name="username" id="username" placeholder="E-mail" required autofocus
-                        maxlength="20" />
+                    <input class="widthform" type="text" name="username" id="username" placeholder="E-mail" required
+                        autofocus maxlength="20" />
                 </div>
 
                 <div>
                     <label for="password">Mot de Passe</label>
-                    <input type="password" name="password" id="password" required maxlength="20" />
+                    <input class="widthform" type="password" name="password" id="password" required maxlength="20" />
                 </div>
 
             </div>
-            <a href="">Mot de passe oublié</a>
-            <button type="submit" name="login" class="btn headerBouton">Me connecter</button>
+            <div class="connectermdp">
+                <button type="submit" name="login" class="btn headerBouton">Me connecter</button>
+                <a href="">Mot de passe oublié</a>
+                
+            </div>
         </form>
     </div>
-    <div>
-        <p>Je n'ai pas encore de compte</p>
-        <h2>Inscription</h2>
+    <div class="formcss blockwhite">
+        <p class="titreinscription">Je n'ai pas encore de compte</p>
+        <h2 class="h2connexion">Inscription</h2>
         <div>
             <label for="nom">Nom</label>
-            <input name="nom" type="text" >
+            <input name="nom" type="text">
         </div>
         <div>
             <label for="prenom">Prénom</label>
-            <input name="prenom" type="text" >
+            <input name="prenom" type="text">
         </div>
         <div>
             <label for="email">E-mail*</label>
-            <input name="email" type="text" >
+            <input name="email" type="text">
         </div>
         <div>
             <label for="mdp">Choisissez votre mot de passe*</label>
-            <input name="mdp" type="text" >
+            <input name="mdp" type="text">
         </div>
         <div>
             <label for="mdpconfirm">Comfirmer votre mot de passe*</label>
-            <input name="mdpconfirm" type="text" >
+            <input name="mdpconfirm" type="text">
         </div>
+        <div class="connectermdp">
+            <a type="submit" name="login" class="btn headerBouton">Je m'inscris</a>
+        <a href="">Mot de passe oublié</a>
+        
+    </div>
     </div>
 </div>
+
+
+
 <?php include "templates/include/footer.php" ?>

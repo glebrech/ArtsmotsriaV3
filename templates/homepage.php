@@ -2,20 +2,21 @@
 
 <div class="home main">
     <h1 class="textHome">Festival Artsmotsria</h1>
-            
-                <img class="logoHome" src="images/logo_Bleu.png" alt="Logo du festival">
-            
-            <div class="buttonHome">
-                <div>
-                    <button type="button" class="btn headerBouton"><img src="images/billet.png" />Billeterie</button>
-                </div>
-                <div>
-                    <button type="button" class="btn headerBouton"><img src="images/compte.png" />Mon compte</button>
-                </div>
-            </div>
-            <span class="textHome">
-                <p>18 AU 20 MARS 2022</p>
-            </span>
+
+    <img class="logoHome" src="images/logo_Bleu.png" alt="Logo du festival">
+
+    <div class="buttonHome">
+        <div>
+            <a href="./?action=billeterie" type="button" class="btn headerBouton"><img
+                    src="images/billet.png" />Billeterie</a>
+        </div>
+        <div>
+            <a href="admin.php" type="button" class="btn headerBouton"><img src="images/compte.png" />Mon compte</a>
+        </div>
+    </div>
+    <span class="textHome">
+        <p>18 AU 20 MARS 2022</p>
+    </span>
 
 </div>
 
@@ -44,7 +45,7 @@
 
     </div>
     <div>
-        <button type="button" class="btn voirplus">Voir Plus</button>
+        <a href="./?action=programmation" type="button" class="btn voirplus">Voir Plus</a>
     </div>
 </div>
 
@@ -72,7 +73,8 @@
 <div class="partner">
     <h2 class="h2partenaire">Nos Partenaires</h2>
     <div>
-        <p class="textpartner">Voici les partenaires qui seront présents lors de notre festival. Merci à eux de nous soutenir chaque années!
+        <p class="textpartner">Voici les partenaires qui seront présents lors de notre festival. Merci à eux de nous
+            soutenir chaque années!
         </p>
         <div class="imgpartner">
             <img src="images/image_partenaire.png" alt="image_partenaire">

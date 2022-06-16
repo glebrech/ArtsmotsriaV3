@@ -1,3 +1,4 @@
+@import url(//db.onlinewebfonts.com/c/596ad608a41bd28960c777827cdd6af1?family=Apple+Chancery);
 #logo {
   width: 172px;
   height: auto;
@@ -23,13 +24,13 @@
   width: 222px;
   height: 74px;
   margin-right: 20px;
-  
+  line-height: 54px;
+  color: #e6dac8 !important;
 }
 body .header a.headerBouton:hover,
 body .header a.headerBouton {
   line-height: 54px;
   color: #e6dac8;
-
 }
 .brown {
   color: #582900;
@@ -40,7 +41,7 @@ body .header a.headerBouton {
 }
 
 .nav {
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 30px;
@@ -69,11 +70,13 @@ body .header a.headerBouton {
 
 .main {
   padding-top: 200px;
+  padding-bottom: 100px;
+  min-height: calc(100vh -  120px);
 }
 
 .textHome {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 45px;
@@ -94,16 +97,17 @@ body .header a.headerBouton {
 
 .h2presentation {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   color: #582900;
+  padding-top: 50px;
 }
 
 .textpresentation {
   text-align: left;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -121,22 +125,23 @@ body .header a.headerBouton {
   justify-content: space-evenly;
 }
 
-.voirplus {
-  text-align: center;
-  font-family: Louis George Cafe;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
+body a.voirplus {
+  text-align: center !important;
+  font-family: 'louis-george-cafe-regular', sans-serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
   background-color: #582900;
-  color: #e6dac8;
-  width: 175px;
-  height: 64px;
-  margin-left: 300px;
+  color: #e6dac8 !important;
+  width: 175px !important;
+  height: 64px !important;
+  margin-left: 300px !important;
+  line-height: 54px !important;
 }
 
 .flag {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -162,11 +167,12 @@ body .header a.headerBouton {
 
 .h2partenaire {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
   color: rgba(88, 41, 0, 1);
+  padding-top: 50px;
 }
 
 .partner {
@@ -175,7 +181,7 @@ body .header a.headerBouton {
 
 .textpartner {
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -197,7 +203,7 @@ body .header a.headerBouton {
 
 .buttonFooter {
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -230,7 +236,7 @@ body .header a.headerBouton {
 .titreInfo {
   color: #582900;
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -249,7 +255,7 @@ body .header a.headerBouton {
 
 .subtitleInfo {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -258,7 +264,7 @@ body .header a.headerBouton {
 .textRest {
   white-space: nowrap;
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 45px;
@@ -295,7 +301,7 @@ body .header a.headerBouton {
 
 .titreContact {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -305,8 +311,7 @@ body .header a.headerBouton {
 
 .blockContact p {
   white-space: nowrap;
-  text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 25px;
@@ -314,9 +319,8 @@ body .header a.headerBouton {
 }
 
 .questionp p {
-  white-space: nowrap;
   text-align: left;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 25px;
@@ -338,6 +342,7 @@ input {
   border-color: #e6dac8;
   width: 987px;
   height: 57px;
+  border-radius: 10px;
 }
 
 .message {
@@ -377,7 +382,7 @@ input {
 
 .titleProgramme {
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
@@ -386,7 +391,7 @@ input {
 
 .content {
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -400,7 +405,7 @@ input {
 
 .backProgrammation h1 {
   text-align: center;
-  font-family: Apple Chancery;
+  font-family: "Apple Chancery";
   font-style: normal;
   font-weight: normal;
   font-size: 40px;
@@ -410,7 +415,7 @@ input {
   position: absolute;
   top: 0;
   right: 100px;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
@@ -418,7 +423,7 @@ input {
 }
 .day {
   text-align: center;
-  font-family: Louis George Cafe;
+  font-family: 'louis-george-cafe-regular', sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
@@ -429,3 +434,91 @@ input {
   position: relative;
 }
 
+.backgroundBilleterie {
+  background-color: #e6dac8;
+}
+
+.imageConstruction {
+  width: 1500px;
+}
+.blockBilleterie {
+  text-align: center;
+  font-family: 'louis-george-cafe-regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 8px;
+  color: rgba(3, 34, 76, 1);
+}
+
+.mention {
+  text-align: center;
+  font-family: 'louis-george-cafe-regular', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  color: rgba(3, 34, 76, 1);
+  padding: 50px;
+}
+
+.blockconnexion {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: #e6dac8;
+}
+
+.formcss {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.widthform {
+  width: 100%;
+}
+
+.blockwhite {
+  background-color: white;
+  width: 1020px;
+  margin: 0 auto 50px;
+  border-radius: 10px;
+  padding: 30px;
+  
+    text-align: left;
+    font-family: 'louis-george-cafe-regular', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    color: rgba(3,34,76,1);
+}
+
+.connectermdp {
+  text-align: left;
+}
+
+.h2connexion{
+  color: #582900;
+  text-align: center;
+
+}
+
+.titreinscription{
+  color: #03224c;
+  text-align: center;
+}
+
+
+.backgroundAdmin{
+  background-color: #e6dac8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.backgroundAdmin p{
+  color: black;
+}
+
+.elouan{
+  text-align: center;
+}
