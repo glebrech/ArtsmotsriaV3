@@ -70,9 +70,9 @@
             <div class="blockProgramme">
                 <img class="imageProgramme" src="<?php echo $programme->url_image; ?>" alt="Illustration du programme">
                 <h2 class="titleProgramme">
-                    <?php echo htmlspecialchars($programme->title) ?>
+                    <?php echo ($programme->title) ?>
                 </h2>
-                <p class="content"><?php echo htmlspecialchars($programme->content) ?></p>
+                <p class="content"><?php echo ($programme->content) ?></p>
 
             </div>
 

@@ -3,7 +3,7 @@
 <div class="home main">
     <h1 class="textHome">Festival Artsmotsria</h1>
 
-    <img class="logoHome" src="images/logo_Bleu.png" alt="Logo du festival">
+    <img class="logoHome" src="images/Logo_Bleu.png" alt="Logo du festival">
 
     <div class="buttonHome">
         <div>

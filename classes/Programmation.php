@@ -89,7 +89,7 @@ class Programme
   */
 
   public static function getById( $id ) {
-    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
+    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
     $sql = "SELECT *, UNIX_TIMESTAMP(publicationDate) AS publicationDate FROM programmation WHERE id = :id";
     $st = $conn->prepare( $sql );
     $st->bindValue( ":id", $id, PDO::PARAM_INT );
@@ -108,7 +108,7 @@ class Programme
   */
 
   public static function getList( $numRows=1000000 ) {
-    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
+    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
     $sql = "SELECT SQL_CALC_FOUND_ROWS *, UNIX_TIMESTAMP(publicationDate) AS publicationDate FROM programmation
             ORDER BY publicationDate DESC LIMIT :numRows";
 
@@ -140,7 +140,7 @@ class Programme
     if ( !is_null( $this->id ) ) trigger_error ( "Programme::insert(): Attempt to insert an Programme object that already has its ID property set (to $this->id).", E_USER_ERROR );
 
     // Insert the Programme
-    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
+    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
     $sql = "INSERT INTO programmation ( publicationDate, dayofweek,title, year_festival, url_image , content ) 
     VALUES ( FROM_UNIXTIME(:publicationDate), :dayofweek, :title, :year_festival, :url_image, :content )";
     $st = $conn->prepare ( $sql );
@@ -166,7 +166,7 @@ class Programme
     if ( is_null( $this->id ) ) trigger_error ( "Programme::update(): Attempt to update an Programme object that does not have its ID property set.", E_USER_ERROR );
    
     // Update the Programme
-    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
+    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD,array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
     $sql = "UPDATE programmation SET publicationDate=FROM_UNIXTIME(:publicationDate), dayofweek=:dayofweek, title=:title, year_festival=:year_festival, url_image=:url_image, content=:content WHERE id = :id";
     $st = $conn->prepare ( $sql );
     $st->bindValue( ":publicationDate", $this->publicationDate, PDO::PARAM_INT );
@@ -191,7 +191,7 @@ class Programme
     if ( is_null( $this->id ) ) trigger_error ( "Programme::delete(): Attempt to delete an Programme object that does not have its ID property set.", E_USER_ERROR );
 
     // Delete the Programme
-    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD );
+    $conn = new PDO( DB_DSN, DB_USERNAME, DB_PASSWORD, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
     $st = $conn->prepare ( "DELETE FROM programmation WHERE id = :id LIMIT 1" );
     $st->bindValue( ":id", $this->id, PDO::PARAM_INT );
     $st->execute();
