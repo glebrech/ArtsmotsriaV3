@@ -145,10 +145,10 @@ class Programme
     VALUES ( FROM_UNIXTIME(:publicationDate), :dayofweek, :title, :year_festival, :url_image, :content )";
     $st = $conn->prepare ( $sql );
     $st->bindValue( ":publicationDate", $this->publicationDate, PDO::PARAM_INT );
-    $st->bindValue( ":dayofweek", $this->content, PDO::PARAM_STR );
+    $st->bindValue( ":dayofweek", $this->dayofweek, PDO::PARAM_STR );
     $st->bindValue( ":title", $this->title, PDO::PARAM_STR );
-    $st->bindValue( ":year_festival", $this->content, PDO::PARAM_INT );
-    $st->bindValue( ":url_image", $this->content, PDO::PARAM_STR );
+    $st->bindValue( ":year_festival", $this->year_festival, PDO::PARAM_INT );
+    $st->bindValue( ":url_image", $this->url_image, PDO::PARAM_STR );
     $st->bindValue( ":content", $this->content, PDO::PARAM_STR );
     $st->execute();
     $this->id = $conn->lastInsertId();

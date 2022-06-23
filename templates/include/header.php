@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <title><?php echo ( $results['pageTitle'] )?></title>
     <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -10,8 +11,11 @@
     <link href="https://db.onlinewebfonts.com/c/596ad608a41bd28960c777827cdd6af1?family=Apple+Chancery" rel="stylesheet" type="text/css"/>
     <meta charset="UTF-8">
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> a919359a07db77ac3a2bf3017b8a36980fc0e7e8
 </head>
 
 <body>

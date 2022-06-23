@@ -8,8 +8,14 @@ define( "CLASS_PATH", "classes" );
 define( "TEMPLATE_PATH", "templates" );
 define( "HOMEPAGE_NUM_ARTICLES", 50 );
 define( "ADMIN_USERNAME", "admin" );
+<<<<<<< HEAD
 define( "ADMIN_PASSWORD", "gYMx@bCi&Yan6Gc8" );
 require( CLASS_PATH . "/Programmation.php" );
+=======
+define( "ADMIN_PASSWORD", "admin" );
+require( CLASS_PATH . "/Programmation.php" );
+
+>>>>>>> a919359a07db77ac3a2bf3017b8a36980fc0e7e8
 
 function handleException( $exception ) {
   echo "Sorry, a problem occurred. Please try later.";
