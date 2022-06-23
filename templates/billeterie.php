@@ -2,7 +2,7 @@
 <div class="main backgroundBilleterie">
     <div class="blockBilleterie">
 
-        <h1>Billeterie en ligne bientôt disponnible</h1>
+        <h1>Billetterie en ligne bientôt disponible</h1>
         <img class="imageConstruction" src="images/construction.png" alt="">
     </div>
 </div>

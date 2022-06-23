@@ -3,12 +3,12 @@
 <div class="home main">
     <h1 class="textHome">Festival Artsmotsria</h1>
 
-    <img class="logoHome" src="images/logo_Bleu.png" alt="Logo du festival">
+    <img class="logoHome" src="images/Logo_bleu.png" alt="Logo du festival">
 
     <div class="buttonHome">
         <div>
             <a href="./?action=billeterie" type="button" class="btn headerBouton"><img
-                    src="images/billet.png" />Billeterie</a>
+                    src="images/billet.png" />Billetterie</a>
         </div>
         <div>
             <a href="admin.php" type="button" class="btn headerBouton"><img src="images/compte.png" />Mon compte</a>
